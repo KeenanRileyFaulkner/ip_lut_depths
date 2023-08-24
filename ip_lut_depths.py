@@ -72,12 +72,6 @@ class Calculator:
                 port_insts[1].isInput(),
             )
 
-        # lut6s = self.__get_lut6s()
-        # lut6s_inputs = list(map(self.__get_lut6_inputs, lut6s))
-        # print("input pins:")
-        # for pin in lut6s_inputs:
-        #     print(f"\t{pin.getName()}")
-
     def __get_top_level_inputs(self):
         """Get the top level inputs on a given IP"""
         top_cell = self.rw_design.getTopEDIFCell()
