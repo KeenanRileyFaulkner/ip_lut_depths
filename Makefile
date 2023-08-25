@@ -7,7 +7,7 @@ venv:
 	$(IN_ENV) python -m pip install -U pip
 
 rapidwright:
-	mkdir third_party && cd third_party && git clone https://github.com/Xilinx/RapidWright.git && cd RapidWright && ./gradlew compileJava && export PATH=`pwd`/bin:$PATH && cd ../..
+	mkdir -p third_party && cd third_party && git clone https://github.com/Xilinx/RapidWright.git && cd RapidWright && ./gradlew compileJava && export PATH=`pwd`/bin:$PATH && source bin/rapidwright_classpath.sh && cd ../..
 
 requirements:
 	$(IN_ENV) python -m pip install -r requirements.txt
